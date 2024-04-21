@@ -32,7 +32,7 @@ const LoginScreen = () => {
 
   const handleLogin = async () => {
     try {
-        const response = await fetch(`http://192.168.11.208:4040/api/login`, {
+        const response = await fetch(`http://192.168.17.152:4040/api/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -75,6 +75,9 @@ const LoginScreen = () => {
     navigation.navigate("Register")
   }
 
+  const handleForgotPassword=()=>{
+    navigation.navigate("ForgotPassword")
+  }
   return (
     <ScrollView contentContainerStyle={loginStyles.container} onLayout={onLayoutRootView}>
       <View style={loginStyles.centered}>
@@ -105,6 +108,9 @@ const LoginScreen = () => {
         <Pressable style={loginStyles.registerButton} onPress={handleRegisterNavigation}>
           <Text style={loginStyles.registerButtonText}>Register</Text>
         </Pressable>
+      </View>
+      <View>
+        <Text style={loginStyles.forgotPasswordText} onPress={handleForgotPassword}>Forgot Password?</Text>
       </View>
     </ScrollView>
   )
@@ -173,5 +179,12 @@ const loginStyles = StyleSheet.create({
     height: 100,
     marginTop: 35,
     marginBottom: 10,
+  },
+  forgotPasswordText:{
+    textAlign: 'center',
+    fontSize: 15,
+    color: colors.purple,
+    fontFamily:"Lato-Italic",
+    margin:20,
   }
 })

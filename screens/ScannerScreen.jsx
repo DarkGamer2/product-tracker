@@ -1,4 +1,4 @@
- import { StyleSheet, Text, View,Pressable } from 'react-native'
+ import { StyleSheet, Text, View,Pressable,Modal } from 'react-native'
 import React, { useState,useEffect } from 'react'
 import { CameraView, Camera } from "expo-camera/next";
 const ScannerScreen = () => {

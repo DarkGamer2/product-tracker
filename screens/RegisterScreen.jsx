@@ -35,7 +35,7 @@ const LoginScreen = () => {
 
   // Function to navigate to Register screen
   const handleRegister = () => {
-    fetch("http://192.168.11.208:4040/api/register", {
+    fetch("http://192.168.100.128:4040/api/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

@@ -6,6 +6,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import BottomTabNavigator from './BottomTabNavigator';
 import AllProductsScreen from "../screens/AllProductsScreen";
 import RegisterScreen from "../screens/RegisterScreen";
+import ForgotPasswordScreen from '../screens/ForgotPasswordScreen';
 const NavigationBar = () => {
     const Stack=createStackNavigator();
   return (
@@ -15,7 +16,8 @@ const NavigationBar = () => {
     <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator}/>
     <Stack.Screen name="All Products" component={AllProductsScreen}/>
     <Stack.Screen name="Register" component={RegisterScreen}/>
-   </Stack.Navigator>
+    <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen}/>
+    </Stack.Navigator>
    </NavigationContainer>
   )
 }
