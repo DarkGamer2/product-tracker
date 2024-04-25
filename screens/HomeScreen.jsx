@@ -6,6 +6,7 @@ import { colors } from '../constants/colors';
 import { items } from '../data/items';
 import Item from '../components/Item';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 SplashScreen.preventAutoHideAsync();
 
 const HomeScreen = ({ route }) => {
@@ -77,6 +78,11 @@ const HomeScreen = ({ route }) => {
           </View>
         </View>
       </Modal>
+      <View>
+        <Pressable style={styles.addTabButton}>
+          <Text style={styles.addTabButtonText}><MaterialIcons name="add-circle-outline" size={20}/>Add A Tab</Text>
+          </Pressable>
+      </View>
     </View>
   );
 }
@@ -86,10 +92,10 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   homeScreenText: {
     textAlign: 'center',
-    fontSize: 15
+    fontSize: 25
   },
   appTitle: {
-    fontSize: 15,
+    fontSize: 30,
     textAlign: 'center',
     marginTop: 35,
     fontFamily: 'BebasNeue-Regular',
@@ -199,5 +205,20 @@ const styles = StyleSheet.create({
   },
   usernameText:{
     color:colors.purple
-  }
+  },
+  addTabButton:{
+    backgroundColor:colors.blue,
+    padding: 15,
+    borderRadius: 10,
+    width: 150,
+    marginLeft: 100,
+    marginTop: 20,
+  },
+  addTabButtonText:{
+    color:colors.white,
+    textAlign: 'center',
+    fontSize: 15,
+    fontFamily: 'BebasNeue-Regular',
+    letterSpacing: 3
+  },
 });

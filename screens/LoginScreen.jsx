@@ -32,7 +32,7 @@ const LoginScreen = () => {
 
   const handleLogin = async () => {
     try {
-        const response = await fetch(`http://192.168.17.152:4040/api/login`, {
+        const response = await fetch(`http://192.168.100.208:4040/api/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -92,7 +92,7 @@ const LoginScreen = () => {
           value={username}
         />
         <Text style={loginStyles.label}>Password: </Text>
-        <TextInput
+        <TextInput secureTextEntry={true}
           style={loginStyles.inputField}
           onChangeText={newPassword => setPassword(newPassword)}
           value={password}
